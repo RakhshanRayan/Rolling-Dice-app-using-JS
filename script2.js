@@ -1,13 +1,13 @@
-var dice;
-var dices = ["&#9856;", "&#9857;", "&#9858;", "&#9859;", "&#9860;", "&#9861;"];
+var num;
 var stopped = true;
 var t;
+var random = Math.floor(Math.random() * 100);
 function change() {
-  var random = Math.floor(Math.random() * 6);
-  dice.innerHTML = dices[random];
+  var random = Math.floor(Math.random() * 100);
+  num.innerHTML = random;
 }
 function stopstart() {
-  if (stopped) {
+  if (random % 2 == 1 && stopped == true) {
     stopped = false;
     t = setInterval(change, 100);
   } else {
@@ -16,6 +16,6 @@ function stopstart() {
   }
 }
 window.onload = function () {
-  dice = document.getElementById("dice");
+  num = document.getElementById("num");
   stopstart();
 };

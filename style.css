@@ -12,3 +12,9 @@ body {
 #dice:hover {
   cursor: pointer;
 }
+#num {
+  font-size: 200px;
+}
+#num:hover {
+  cursor: pointer;
+}
